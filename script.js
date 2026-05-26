@@ -119,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
   statNumbers.forEach(num => statsObserver.observe(num));
 
   function animateCounter(element, target) {
+    const originalTargetStr = element.getAttribute('data-target') || '';
+    const suffix = originalTargetStr.replace(/[0-9]/g, ''); // Retain trailing "+", "%", etc.
     let current = 0;
     const duration = 1800; // Total counter animation runtime in ms
     const increment = Math.ceil(target / (duration / 16)); // Target step per frame (approx 60fps)
@@ -126,10 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const timer = setInterval(() => {
       current += increment;
       if (current >= target) {
-        element.textContent = target;
+        element.textContent = target + suffix;
         clearInterval(timer);
       } else {
-        element.textContent = current;
+        element.textContent = current + suffix;
       }
     }, 16);
   }
