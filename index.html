@@ -28,12 +28,10 @@
 
       <ul class="nav-links" id="nav-links">
         <li class="nav-item active"><a href="#home">Home</a></li>
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#lab">Tissue Culture</a></li>
-        <li class="nav-item"><a href="#plants">Plants Available</a></li>
+        <li class="nav-item"><a href="#about">About Us</a></li>
+        <li class="nav-item"><a href="#plants">Product Range</a></li>
         <li class="nav-item"><a href="#internship">Internships</a></li>
-        <li class="nav-item"><a href="#testimonials">Testimonials</a></li>
-        <li class="nav-item"><a href="#contact">Contact</a></li>
+        <li class="nav-item"><a href="#contact">Contact Us</a></li>
       </ul>
 
       <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu">
@@ -126,8 +124,7 @@
       <div class="about-grid">
         <div class="about-image-panel">
           <div class="image-wrapper about-image-wrapper">
-            <img
-              src="https://cdn.prod.website-files.com/66749f99929e6bbf9c89b9b8/673c6dd4f86078be7346f0d7_Golden_Gate_Nursery_2024_%40ES9_Photography_2024-23%20Optimized.webp"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_nh6BMfFBcu2jff5TxKXBagTBjICceRFwYw&s"
               alt="Curated catalog of exotic plants" class="animated-img">
             <div class="sheen-overlay"></div>
             <div class="image-wrapper-corner-br"></div>
@@ -264,6 +261,8 @@
       </div>
     </div>
   </section>
+
+
 
   <!-- ==========================================
        PLANTS AVAILABLE SECTION
@@ -480,7 +479,7 @@
         <div class="intern-cta-panel">
           <div class="internship-cta-card glass-panel">
             <span class="cta-tag">Applications Now Open</span>
-            <h4>Join the Next Cohort</h4>
+            <h4>Lab Training & Internship on Tissue Culture</h4>
             <p class="cta-desc">For Agriculture, Biotechnology, Botany, and Microbiology students looking to secure an
               internship at our facility.</p>
 
@@ -499,7 +498,7 @@
 
             <div style="margin-top: 1.5rem;">
               <button class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1.25rem;"
-                id="modal-details-btn">View Lab Requirements</button>
+                id="modal-details-btn">Requirments to apply for the Intership</button>
             </div>
           </div>
         </div>
@@ -824,6 +823,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================
+       LIGHTBOX / MODAL VIEWER FOR GALLERY
+       ========================================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Facility Photo Viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox"
+      onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-arrow arrow-left" aria-label="Previous Photo"
+      onclick="changeLightboxSlide(-1)">&#10094;</button>
+    <button class="lightbox-arrow arrow-right" aria-label="Next Photo"
+      onclick="changeLightboxSlide(1)">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Lab Facility Photo Full View">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
 
   <!-- ==========================================
        INTERNSHIP MODAL (Requirements Fallback UI)
